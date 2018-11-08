@@ -38,13 +38,13 @@ We also need to activate a virtualenv with the diff_match_patch library::
     $ source venv/bin/activate
     $ pip install diff_match_patch
 
-We now copy a few files from `eduid-cnf-poc` over to our newly created repo.
-First, we copy the `.gitattributes` file. In it, we indicate that files that
-match `*.test` will use the filter eduid-config::
+We now copy a few files from ``eduid-conf-poc`` over to our newly created repo.
+First, we copy the ``.gitattributes`` file. In it, we indicate that files that
+match ``*.test`` will use the filter eduid-config::
 
     $ cp /path/to/eduid-conf-poc/.gitattributes .
 
-Now we copy over `eduidconf-gitconfig`, where the filter is defined, with
+Now we copy over ``eduidconf-gitconfig``, where the filter is defined, with
 references to the scripts that will be used to check the code in and out::
 
     $ cp /path/to/eduid-conf-poc/eduidconf-gitconfig .
@@ -62,9 +62,9 @@ In this file there is already a single setting, to wit::
 
     EDUIDCONF_TEST="testing"
 
-All settings for this POC must start with `EDUIDCONF`.
+All settings for this POC must start with ``EDUIDCONF``.
 
-We now need to activate the git configuration in `eduidconf-gitconfig`. This
+We now need to activate the git configuration in ``eduidconf-gitconfig``. This
 can be achieved with this command::
 
     $ git config --local include.path ../eduidconf-gitconfig
@@ -93,8 +93,8 @@ We can now check out our master branch and again our test-branch::
 
     $ git checkout -
 
-We can check that our config setting has been replaced by its value, but `git
-status` does not see it as an addable change::
+We can check that our config setting has been replaced by its value, but ``git
+status`` does not see it as an addable change::
 
     $ cat one.test
     This is a test with a testing setting
@@ -123,8 +123,8 @@ name::
      This is a test with a EDUIDCONF_TEST setting
     +and a bit more text
 
-To customize the settings, we have to use a `eduidconf_custom.py` module, with
-the same contents as in `eduidconf_defaults.py`, but customizing the values
+To customize the settings, we have to use a ``eduidconf_custom.py`` module, with
+the same contents as in ``eduidconf_defaults.py``, but customizing the values
 therein::
 
     $ cp eduidconf_defaults.py eduidconf_custom.py
@@ -135,4 +135,4 @@ therein::
     This is a test with a testong setting
     and a bit more text
 
-Note that `testing` has become `testong`.
+Note that ``testing`` has become ``testong``.
