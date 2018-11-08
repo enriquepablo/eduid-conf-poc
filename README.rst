@@ -18,7 +18,9 @@ The possible advantages of these scheme would be two fold:
 
  * All configurable files can be kept under git; all environments can be
    managed by files kept in git. Therefore configuration at this level can be
-   used to rule configuration at all other levels.
+   used to rule configuration at all other levels. Of course this is an
+   hyperbole, but it conveys my meaning; for a counter-example, configuring the
+   actual git with ths scheme would not be possible.
  * There is no danger of accidentally commiting local settings during
    development; In this sense, this idea can be seen as a very fine grained
    gitignore scheme.
