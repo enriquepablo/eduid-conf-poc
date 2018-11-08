@@ -1,0 +1,3 @@
+[filter "eduid-config"]
+	smudge = python eduidconf-gitfilter-out %f
+	clean = python eduidconf-gitfilter-in %f
