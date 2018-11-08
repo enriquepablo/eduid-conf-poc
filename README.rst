@@ -89,13 +89,22 @@ this were to be implemented as git commands, this would be automatic::
     $ git add one.test
     $ git commit -m 'testing settings'
 
-We can now check out our master branch, and see that our config setting has
-been replaced by its value, but ``git status`` does not see it as an addable
-change::
+We can now check out our master branch, and see that the name of our config
+setting has been replaced by its value, but what has been committed is the
+name, and ``git status`` does not see it as an addable change::
 
     $ git checkout -
     $ cat one.test
     This is a test with a testing setting
+    $ git diff HEAD~1
+    diff --git a/one.test b/one.test
+    new file mode 100644
+    index 0000000..8f6f4ef
+    --- /dev/null
+    +++ b/one.test
+    @@ -0,0 +1,2 @@
+    +This is a test with a EDUIDCONF_TEST setting
+    +
     $ git status
 
 If we modify the file again, and we commit the changes, only the new changes
