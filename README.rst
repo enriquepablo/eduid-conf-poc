@@ -138,7 +138,7 @@ therein::
     $ vim eduidconf_custom.py
     $ git checkout -
     $ git checkout -
-    S one.test
+    $ cat one.test
     This is a test with a testong setting
     and a bit more text
 
