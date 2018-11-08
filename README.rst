@@ -12,8 +12,7 @@ commited to the repository, the config setting values are replaced by their
 names.
 
 This is achieved by using a filter like those explained in the documentation
-for `git attributes
-    <https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_keyword_expansion>`_.
+for `git attributes <https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_keyword_expansion>`_.
 
 The possible advantages of these scheme would be two fold:
 
