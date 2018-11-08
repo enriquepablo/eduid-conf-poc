@@ -89,13 +89,11 @@ this were to be implemented as git commands, this would be automatic::
     $ git add one.test
     $ git commit -m 'testing settings'
 
-We can now check out our master branch and again our test-branch::
+We can now check out our master branch, and see that our config setting has
+been replaced by its value, but ``git status`` does not see it as an addable
+change::
 
     $ git checkout -
-
-We can check that our config setting has been replaced by its value, but ``git
-status`` does not see it as an addable change::
-
     $ cat one.test
     This is a test with a testing setting
     $ git status
