@@ -28,7 +28,11 @@ The possible advantages of these scheme would be two fold:
 Testing the POC
 ---------------
 
-The first thing we need to do is to make a git repo::
+The first thing we need is this code::
+
+   $ git clone https://github.com/enriquepablo/eduid-conf-poc.git /path/to/eduid-conf-poc
+
+make a git repo::
 
     $ mkdir test-poc
     $ cd test-poc
@@ -39,6 +43,8 @@ We also need to activate a virtualenv with the diff_match_patch library::
     $ virtualenv venv
     $ source venv/bin/activate
     $ pip install diff_match_patch
+    
+
 
 We now copy a few files from ``eduid-conf-poc`` over to our newly created repo.
 First, we copy the ``.gitattributes`` file. In it, we indicate that files that
