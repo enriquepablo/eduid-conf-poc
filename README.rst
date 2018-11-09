@@ -1,6 +1,6 @@
 
-Proof of concept for git governed configuration
-+++++++++++++++++++++++++++++++++++++++++++++++
+Proof of concept for git governed project wide configuration
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The aim is to have project wide configuration managed and applied by git.
 To have a unique central git repository of configuration settings defaults per project, present
@@ -12,16 +12,13 @@ checked out by git, all the config setting names are replaced by their default, 
 locally customized, values, as given by the mentioned unique central git repository; and when
 changes are commited to the repository, the config setting values are replaced by their names.
 
-This is achieved by using a filter like those explained in the documentation
+This is achieved with a mechanism like the filters explained in the documentation
 for `git attributes <https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_keyword_expansion>`_.
 
 The possible advantages of these scheme would be two fold:
 
  * All configurable files can be kept under git; all environments can be
-   managed by files kept in git. Therefore configuration at this level can be
-   used to rule configuration at all other levels. Of course this is an
-   hyperbole, but it conveys my meaning; for a counter-example, configuring the
-   actual git with ths scheme would not be possible.
+   managed by files kept in git. Except git itself, Or...
  * There is no danger of accidentally commiting local settings during
    development; In this sense, this idea can be seen as a very fine grained
    gitignore scheme.
