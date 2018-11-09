@@ -3,7 +3,7 @@ Proof of concept for git governed configuration
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 The aim is to have project wide configuration managed and applied by git.
-To have a single git repository of configuration settings defaults, present
+To have a single git repository of configuration settings defaults per project, present
 as a git submodule in every other repository belonging to the project,
 irrespective of the context where the code included in the repoitory has its
 meaning. The idea is that the files versioned by git only keep the names of
