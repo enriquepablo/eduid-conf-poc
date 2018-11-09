@@ -3,16 +3,14 @@ Proof of concept for git governed configuration
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 The aim is to have project wide configuration managed and applied by git.
-To have a single git repository of configuration settings defaults per project, present
+To have a unique central git repository of configuration settings defaults per project, present
 as a git submodule in every other repository belonging to the project,
 irrespective of the context where the code included in the repoitory has its
 meaning. The idea is that the files versioned by git only keep the names of
-the configuration settings, in the places where their values should be. Git
-also knows the default values for those config settings. When the project is
-checked out by git, all the config setting names are replaced by their
-(default, or, possibly, locally customized,) values; and when changes are
-commited to the repository, the config setting values are replaced by their
-names.
+the configuration settings, in the places where their values should be. When the project is
+checked out by git, all the config setting names are replaced by their default, or, possibly,
+locally customized, values, as given by the mentioned unique central git repository; and when
+changes are commited to the repository, the config setting values are replaced by their names.
 
 This is achieved by using a filter like those explained in the documentation
 for `git attributes <https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_keyword_expansion>`_.
